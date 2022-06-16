@@ -4,20 +4,21 @@ const passCulture = (livreAvendreBase) => {
         counterVente ++;
         let calVentes = counterVente - 1;
         console.log('\x1b[37m', Math.round(calVentes) + " " + "ventes");
-        console.log('\x1b[31m', Math.round(i) + "€" + " " + "< pertes");
+        console.log('\x1b[31m', "↓" + " " + Math.round(i) + "€" + " " + "pertes");
         let calGains = calVentes * 15;
-        console.log('\x1b[32m', calGains + "€" + " " + "> gains");
-        console.log('\x1b[32m', Math.round(calGains - i) + "€" + " " + "=> benefice");
+        console.log('\x1b[32m', "↑" + " " + calGains + "€" + " " + "gains");
+        console.log('\x1b[32m', "→" + " " + Math.round(calGains - i) + "€" + " " + "benefice");
         console.log(" ")
     }
 }
-passCulture(10000000);
+passCulture(1050);
 
 
 const passCulture2 = (livreAvendreBase2) => {
     let counterVenteForResult = livreAvendreBase2;
     let calculResult = counterVenteForResult * 15;
-    console.log('\x1b[32m', livreAvendreBase2 + "ventes" + " " + "=" + " " + calculResult + "€")
+    console.log('\x1b[37m', livreAvendreBase2 + " " + "ventes")
+    console.log('\x1b[32m', "↑" + " " + Math.round(calculResult) + "€" + " " + "gains")
     console.log(" ")
 }
 passCulture2(200);
